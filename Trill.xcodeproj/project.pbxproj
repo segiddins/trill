@@ -201,6 +201,7 @@
 		DC4F08BE1E2F113600CE19E6 /* libLLVMX86Disassembler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC4F087B1E2F113600CE19E6 /* libLLVMX86Disassembler.a */; };
 		DC4F08BF1E2F113600CE19E6 /* libLLVMX86Info.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC4F087C1E2F113600CE19E6 /* libLLVMX86Info.a */; };
 		DC4F08C01E2F113600CE19E6 /* libLLVMX86Utils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC4F087D1E2F113600CE19E6 /* libLLVMX86Utils.a */; };
+		DC5D05581E43D3BA0022FA10 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D05571E43D3BA0022FA10 /* Constant.swift */; };
 		DC5EA0C41E15A10E00875545 /* VarBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5EA0C31E15A10E00875545 /* VarBinding.swift */; };
 		DC5EA0C61E16ED1200875545 /* ColoredStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5EA0C51E16ED1200875545 /* ColoredStream.swift */; };
 		DC5EA0C81E185C8300875545 /* StreamConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5EA0C71E185C8300875545 /* StreamConsumer.swift */; };
@@ -501,6 +502,7 @@
 		DC4F087D1E2F113600CE19E6 /* libLLVMX86Utils.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLLVMX86Utils.a; path = ../../../../../../usr/local/Cellar/llvm/3.9.1/lib/libLLVMX86Utils.a; sourceTree = "<group>"; };
 		DC5996661D7A487C0040073F /* libLLVMDebugInfoCodeView.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLLVMDebugInfoCodeView.a; path = ../../../../../../usr/local/llvm/lib/libLLVMDebugInfoCodeView.a; sourceTree = "<group>"; };
 		DC5996671D7A487C0040073F /* libLLVMDebugInfoDWARF.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLLVMDebugInfoDWARF.a; path = ../../../../../../usr/local/llvm/lib/libLLVMDebugInfoDWARF.a; sourceTree = "<group>"; };
+		DC5D05571E43D3BA0022FA10 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		DC5EA0C31E15A10E00875545 /* VarBinding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VarBinding.swift; sourceTree = "<group>"; };
 		DC5EA0C51E16ED1200875545 /* ColoredStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColoredStream.swift; sourceTree = "<group>"; };
 		DC5EA0C71E185C8300875545 /* StreamConsumer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamConsumer.swift; sourceTree = "<group>"; };
@@ -925,6 +927,7 @@
 			children = (
 				DC4F07F71E2F110B00CE19E6 /* Alias.swift */,
 				DC4F07F81E2F110B00CE19E6 /* ArrayType.swift */,
+				DC5D05571E43D3BA0022FA10 /* Constant.swift */,
 				DC4F07F91E2F110B00CE19E6 /* BasicBlock.swift */,
 				DC4F07FA1E2F110B00CE19E6 /* FloatType.swift */,
 				DC4F07FB1E2F110B00CE19E6 /* Function.swift */,
@@ -1462,6 +1465,7 @@
 				DC176FFE1D6911A200FEFB85 /* Values.swift in Sources */,
 				DC4F083A1E2F110B00CE19E6 /* X86MMXType.swift in Sources */,
 				DC4F08311E2F110B00CE19E6 /* PointerType.swift in Sources */,
+				DC5D05581E43D3BA0022FA10 /* Constant.swift in Sources */,
 				DCEF07FF1DCD6BA90075FE15 /* ANSIColor.swift in Sources */,
 				DC4F08261E2F110B00CE19E6 /* IRValue+Kinds.swift in Sources */,
 				DC1770001D6911A200FEFB85 /* DiagnosticConsumer.swift in Sources */,
@@ -1718,6 +1722,8 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
+				GCC_WARN_PEDANTIC = NO;
 				HEADER_SEARCH_PATHS = /usr/local/opt/llvm/include;
 				LD_RUNPATH_SEARCH_PATHS = /usr/local/llvm/lib;
 				LIBRARY_SEARCH_PATHS = (
@@ -1738,6 +1744,8 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
+				GCC_WARN_PEDANTIC = NO;
 				HEADER_SEARCH_PATHS = /usr/local/opt/llvm/include;
 				LD_RUNPATH_SEARCH_PATHS = /usr/local/llvm/lib;
 				LIBRARY_SEARCH_PATHS = (
